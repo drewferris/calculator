@@ -1,0 +1,12 @@
+.calc-container {
+  display: flex;
+}
+
+.button-container {
+  width: 200px;
+}
+
+
+.input-column {
+  flex: 1;
+}
