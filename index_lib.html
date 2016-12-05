@@ -2,7 +2,7 @@
 <html>
   <head>
     <link href="styles.css" rel="stylesheet" />
-    <script src="ko_calc.js"></script>
+    <script src="calc_lib.js"></script>
     <script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.4.1.js"></script>
     <title>Calculator</title>
   </head>
@@ -15,17 +15,11 @@
           <button data-bind="click: mult">Multiply</button>
           <button data-bind="click: div">Divide</button>
           <button data-bind="click: clr">Clear</button>
-          <button data-bind="click: loadXMLDoc">AJAX</button>
         </div>
         <div class="input-column">
           <input data-bind="value: in1" />
-          <input data-bind="value: in2" />
           <p data-bind="text: result"></p>
         </div>
-        <div id="myDiv"></div>
-        <ul id="indData">
-          <li data-bind="text: resData().login"></li >
-        </ul>
     </div>
   </body>
 </html>
