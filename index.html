@@ -2,24 +2,25 @@
 <html>
   <head>
     <link href="styles.css" rel="stylesheet" />
-    <script src="calc.js"></script>
+    <script src="ko_calc.js"></script>
     <title>Calculator</title>
   </head>
 
   <body>
     <div class="calc-container">
         <div class="button-container">
-          <button id="add">Add</button>
-          <button id="sub">Subtract</button>
-          <button id="mult">Multiply</button>
-          <button id="div">Divide</button>
-          <button id="clr">Clear</button>
+          <button data-bind="click: add">Add</button>
+          <button data-bind="click: sub">Subtract</button>
+          <button data-bind="click: mult">Multiply</button>
+          <button data-bind="click: div">Divide</button>
+          <button data-bind="click: clr">Clear</button>
         </div>
         <div class="input-column">
-          <input type="text" id="userInput1"/>
-          <input type="text" id="userInput2"/>
-          <div id="result"></div>
+          <input data-bind="value: in1" />
+          <input data-bind="value: in2" />
+          <p data-bind="text: result"></p>
         </div>
     </div>
+    <script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.4.1.js"></script>
   </body>
 </html>
