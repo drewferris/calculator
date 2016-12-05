@@ -1,5 +1,5 @@
 .calc-container {
-  display: flex;
+  float: left;
 }
 
 .button-container {
@@ -8,5 +8,15 @@
 
 
 .input-column {
-  flex: 1;
+  float: left;
+}
+
+#myDiv {
+  float: left;
+  clear: both;
+}
+
+#indData {
+  float: left;
+  clear: both;
 }
