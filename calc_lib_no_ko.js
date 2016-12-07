@@ -47,7 +47,6 @@
   function _init() {
     console.log('dom loaded');
     var buttons = [];
-
     var everyChild = document.querySelectorAll('.button-container button');
     for (var i = 0; i < everyChild.length; i++) {
       buttons.push(everyChild[i].id);
@@ -61,5 +60,13 @@
 
   }
 
+
   document.addEventListener('DOMContentLoaded', _init);
 })(calc = {});
+
+// function ncacl() {
+//
+// }
+//
+// ui.tabs("div123");
+// ui.tabs("div456");

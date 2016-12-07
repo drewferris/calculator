@@ -3,11 +3,22 @@
   <head>
     <link href="styles.css" rel="stylesheet" />
     <script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.4.1.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="calc.js"></script>
     <script src="calc_lib_no_ko.js"></script>
+    <script src="ui.js"></script>
     <title>Calculator</title>
   </head>
 
   <body>
+    <div id="tabs">
+      <span id="h1">Header1</span>
+      <p id="p1" style="display:none">text1</p>
+      <span id="h2">Header2</span>
+      <p id="p2" style="display:none">text2</p>
+      <span id="h3">Header3</span>
+      <p id="p3" style="display:none">text3</p>
+    </div>
     <div class="calc-container">
         <div class="button-container">
           <button id="add">Add</button>
@@ -21,4 +32,5 @@
           <p data-bind="text: viewModel._val"></p>
         </div>
     </div>
+
   </body>
