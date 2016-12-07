@@ -20,3 +20,15 @@
   float: left;
   clear: both;
 }
+
+#id {
+  display: inline;
+}
+
+.active {
+  display:inline;
+}
+
+.inactive {
+  display: none;
+}
