@@ -25,10 +25,19 @@
   display: inline;
 }
 
-.active {
-  display:inline;
+.tabs span {
+  margin: 5px 10px;
+  background-color: #0f0;
+  cursor: pointer;
+}
+.tabs span.on {
+  background-color: #f00;
 }
 
-.inactive {
+.tabs p {
   display: none;
+  background-color: #00f;
+}
+.tabs p.on {
+  display: block;
 }

@@ -43,7 +43,6 @@
     });
   }
 
-
   function _init() {
     console.log('dom loaded');
     var buttons = [];

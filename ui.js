@@ -1,48 +1,36 @@
 (function(ui) {
-  ui.tabs = function() {
+  ui.tabs = function(el, ini) {
+    var t = $('#' + el).addClass('tabs');
+    if(ini !== undefined) init();
 
+    var hs = t.children('span');
+    var ts = t.children('p');
 
+    hs.first().addClass('on');
+    ts.first().addClass('on');
 
+    hs.click(function () {
+      var t = $(this);
+      if((t.hasClass('on')) && ini.col) {
+        t.removeClass('on');
+        ts.hide();
+        return;
+      }
+      hs.removeClass('on');
+      ts.hide();
+
+      t.addClass('on');
+      ts.eq(t.index()).fadeIn('slow');
+    });
+
+    function init() {
+      for(var i = 0; i < ini.s.length; i++) {
+        t.append("<span>" + ini.s[i] + "</span>");
+      }
+      for(var i = 0; i < ini.p.length; i++) {
+        t.append("<p>" + ini.p[i] + "</p>");
+      }
+    }
   };
 
-  function operation(classEl) {
-    var tab = document.getElementById(classEl),
-      s = $(tab).next();
-
-    var ps = [];
-    var everyChild = document.querySelectorAll('#tabs p');
-    for (var i = 0; i < everyChild.length; i++) {
-      ps.push(everyChild[i].id);
-    }
-
-    tab.addEventListener('click', function() {
-      for (var i = 0; i < ps.length; i++) {
-        if (ps[i] !== s.attr('id')) {
-          var h = document.getElementById(ps[i]);
-          h.setAttribute("style", "display: none")
-          console.log(h);
-          // var l = $(ps[i]);
-        } else if (ps[i] === s.attr('id')) {
-          s.css("display", "block");
-        }
-      }
-    });
-  }
-
-
-  function _init() {
-    console.log('dom loaded');
-    var tabs = [];
-    var everyChild = document.querySelectorAll('#tabs span');
-    for (var i = 0; i < everyChild.length; i++) {
-      tabs.push(everyChild[i].id);
-    }
-
-    for (var j = 0; j < tabs.length; j++) {
-      operation(tabs[j]);
-    }
-  }
-
-
-  document.addEventListener('DOMContentLoaded', _init);
 })(ui = {});
